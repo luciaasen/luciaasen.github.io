@@ -1,0 +1,86 @@
+/* ==========================================================================
+   MASTHEAD
+   ========================================================================== */
+
+.masthead {
+  position: relative;
+  /*background: var(--global-bg-color);*/
+  border-bottom: 1px solid $border-color;
+  height: fit-content;
+  top: 0;
+  width: 100%;
+  -webkit-animation: intro 0.3s both;
+          animation: intro 0.3s both;
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+  z-index: 20;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    background: var(--global-border-color);
+    width: 100%;
+  }
+  &__inner-wrap {
+    @include container;
+    @include clearfix;
+    padding: 1em 1em 1em;
+    font-family: $sans-serif-narrow;
+
+    @include breakpoint($x-large) {
+      max-width: $x-large;
+    }
+
+    nav {
+      z-index: 10;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.masthead__menu {
+
+  ul {
+    margin: 0;
+    padding: 0;
+    clear: both;
+    list-style-type: none;
+  }
+}
+
+.masthead__menu-item {
+  display: block;
+  list-style-type: none;
+  white-space: nowrap;
+
+  &--lg {
+    padding-right: 2em;
+    font-weight: 700;
+  }
+}
+
+/* added in hopes of recovering the underline*/
+.masthead__menu-item.selected a {
+  color: $link-color;
+  font-weight: 700;
+  border-bottom: 1px solid $link-color;
+  /* los colores de arriba eran var(--global-text-color)*/
+  /*color: $border-color;
+  font-weight: 700;
+  border-bottom: 2px solid $border-color;*/
+  pointer-events: none; /* Move this here */
+  cursor: default; /* Move this here too */
+}
+
+.masthead__menu-item.selected a:hover {
+  color: var(--global-text-color);
+  border-bottom: 2px solid var(--global-text-color);
+  /*color: $border-color;
+  border-bottom: 2px solid $border-color;*/
+  /* No need to repeat pointer-events and cursor here */
+}
