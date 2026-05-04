@@ -6,7 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-Hi! I am Lucía, a PhD student at Newcastle University. 
+I am a PhD student at Newcastle University. 
 
 My research falls under the area of geometric group theory, which is a broad term used in Mathematics to say that you study groups by associating  to them objects that have nice geometric properties. I am particularly interested in the interplay of these geometric properties and the more language-theoretic ones.
 
