@@ -38,6 +38,7 @@ $type-size-5                : 1em;      // ~16px
 $type-size-6                : 0.75em;   // ~12px
 $type-size-7                : 0.6875em; // ~11px
 $type-size-8                : 0.625em;  // ~10px
+$type-size-syntax           : 0.875em;  // ~14px
 
 $global-font-family         : $sans-serif;
 $header-font-family         : $sans-serif;
@@ -59,9 +60,13 @@ $x-large                    : 1280px !default;
    Grid
    ========================================================================== */
 
-$right-sidebar-width-narrow : auto;
+/*$right-sidebar-width-narrow : auto;
 $right-sidebar-width        : auto;
-$right-sidebar-width-wide   : auto;
+$right-sidebar-width-wide   : auto;*/
+/* parameters changed to those of jayrobwilliams version */
+$right-sidebar-width-narrow : 200px !default;
+$right-sidebar-width        : 300px !default;
+$right-sidebar-width-wide   : 400px !default;
 
 $susy: (
     columns: 12,

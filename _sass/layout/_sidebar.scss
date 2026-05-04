@@ -64,10 +64,19 @@
   margin-bottom: 1em;
 
   @include breakpoint($large) {
-    position: relative;
+    /*position: relative;
     float: right;
     width: $right-sidebar-width-narrow;
-    margin-left: span(0.5 of 12);
+    margin-left: span(0.5 of 12);*/
+    position: sticky !important;
+    float: right !important;
+    top: 0;
+    right: 0;
+    width: $right-sidebar-width-narrow;
+    margin-right: -1 * $right-sidebar-width-narrow;
+    padding-left: 1em;
+    padding-top: 1em !important;
+    /* all above copied from jayrobwilliams */
     z-index: 10;
   }
 

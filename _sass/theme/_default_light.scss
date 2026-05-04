@@ -2,7 +2,7 @@
     DEFAULT THEME - LIGHT VERSION
     ========================================================================== */
 /* Color codes used for the theme */
-$primary-color              : #2f7f93;
+$primary-color              : #7a8288;
 $gray                       : #7a8288;
 $dark-gray                  : mix(#000, $gray, 40%);
 $darker-gray                : mix(#000, $gray, 60%);
@@ -10,11 +10,10 @@ $light-gray                 : mix(#fff, $gray, 50%);
 $lighter-gray               : mix(#fff, $gray, 90%);
 
 /* Color codes used for the site */
-$danger-color               : #ee5f5b;
-$info-color                 : #2f7f93;
-$notice-color               : #7a8288;
 $success-color              : #62c462;
 $warning-color              : #f89406;
+$danger-color               : #ee5f5b;
+$info-color                 : #2979ab;
 
 /* Other basic settings for the template */
 $border-radius              : 4px;
@@ -26,23 +25,35 @@ $navicon-height             : 4px;
 $sidebar-link-max-width     : 250px;
 $sidebar-screen-min-width   : 1024px;
 
+/* adding this link-color here bc Im not sure ow to access
+--global-link-color inside de :root bit. 
+Maybe it is normal, but maybe it requires the var(--global...) 
+that is used in other places in the code */
+$base-color                 : $info-color;
+$darker-base                : mix(#000, $base-color, 60%);
+$dark-base                  : mix(#000, $base-color, 40%);
+$light-base                 : mix(#fff, $base-color, 50%);
+$lighter-base               : mix(#fff, $base-color, 90%);
 /* Default light theme for the site */
-:root {
+:root {	
     --global-base-color                 : #{$primary-color};
+    --global-body-color                 : #fff;
     --global-bg-color                   : #fff;
     --global-footer-bg-color            : #f2f3f3;
     --global-border-color               : #{$lighter-gray};
     --global-dark-border-color          : #bdc1c4;
     --global-code-background-color      : #fafafa;
+    --global-code-background-color-dark : #{$light-gray};
     --global-code-text-color            : #{$darker-gray};
     --global-fig-caption-color          : mix(#fff,  #{$dark-gray}, 25%);
-    --global-link-color                 : #52adc8;
-    --global-link-color-hover           : mix(#000, #2f7f93, 25%);
-    --global-link-color-visited         : mix(#fff, #2f7f93, 25%);  
-    --global-masthead-link-color        : #{$dark-gray};
-    --global-masthead-link-color-hover  : mix(#000, #{$gray}, 25%);    
+    --global-link-color                 : #{$info-color};
+    --global-link-color-hover           : mix(#000, #{$info-color}, 25%);
+    --global-link-color-visited         : #{$darker-gray};  
+    --global-masthead-link-color        : #{$primary-color};
+    --global-masthead-link-color-hover  : #{$light-base};    
     --global-text-color                 : #{$dark-gray};
     --global-text-color-light           : #{$light-gray};
     --global-thead-color                : #{$lighter-gray};
 }
+
 
