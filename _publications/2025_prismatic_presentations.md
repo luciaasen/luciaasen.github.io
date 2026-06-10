@@ -2,7 +2,7 @@
 title: "Prismatic presentations: the geometric counterpart of trickle groups"
 collection: publications
 category: preprints
-permalink: /publication/2025_prismatic_presentations
-paperurl: '/files/talks/2025-12-05-seminar_manchester.pdf'
+permalink: /publication/2026_prismatic
+paperurl: '/files/research/2026_prismatic.pdf'
 citation: 'with Paloma López Larios.'
 ---
